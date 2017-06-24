@@ -1,0 +1,38 @@
+body {
+  background: tomato;
+}
+
+#logo {
+  width: 70px;
+}
+
+.navbar {
+  min-height: 70px;
+  box-shadow: 0px 2px 3px grey;
+}
+
+@media (min-width: 768px){
+  .navbar-nav>li>a {
+    position: relative;
+    display: block;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+@media (max-width: 767px){
+  .navbar-nav>li>a {
+      position: relative;
+      display: block;
+      padding-top: 15px;
+  }
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: rgb(181, 66, 84);
+}
+
+.navbar-toggle {
+  margin-top: 18px;
+  margin-bottom: 18px;;
+}

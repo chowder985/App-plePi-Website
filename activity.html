@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>App:ple Pi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/jquery.flipster.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style media="screen">
+      html{
+        height: 100%;
+      }
+      body{
+        background: linear-gradient(rgb(253, 145, 122), rgb(251, 104, 105));
+      }
+      .navbar {
+        min-height: 70px;
+        box-shadow: 0px 2px 3px rgb(182, 130, 117);
+      }
+
+      @media (min-width: 768px){
+        #my-flipster{
+          margin-top: 18%;
+          padding-bottom: 4px;
+        }
+      }
+
+      @media (max-width: 767px){
+        #my-flipster{
+          margin-top: 30%;
+          padding-bottom: 4px;
+        }
+      }
+
+      #my-flipster>ul>li>div{
+        width: 300px;
+        height: 300px;
+        background: rgb(250, 250, 250);
+        box-shadow: 0px 2px 2px rgb(187, 75, 81);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="index.html" class="navbar-brand"><img id="logo" src="images/appplelogo.png"></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">메인</a></li>
+            <li><a href="introduction.html">소개</a></li>
+            <li><a href="rewards.html">수상 실적</a></li>
+            <li class="active"><a href="activity.html">활동</a></li>
+            <li><a href="curriculum.html">커리큘럼</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="my-flipster">
+      <ul>
+        <li>
+          <div>
+            <p>Hello</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>World!</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>LoL</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.flipster.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+    var flat = $("#my-flipster").flipster({
+        style: 'flat',
+        spacing: -0.001,
+        buttons: true
+    });
+    </script>
+  </body>
+</html>
