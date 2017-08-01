@@ -1,5 +1,5 @@
 body {
-  background: tomato;
+  background: white;
 }
 
 #logo {
@@ -12,9 +12,10 @@ body {
 }
 
 @media (min-width: 768px){
+  .navbar{
+    border-radius: 0px;
+  }
   .navbar-nav>li>a {
-    position: relative;
-    display: block;
     padding-top: 25px;
     padding-bottom: 25px;
   }
@@ -22,8 +23,6 @@ body {
 
 @media (max-width: 767px){
   .navbar-nav>li>a {
-      position: relative;
-      display: block;
       padding-top: 15px;
   }
 }

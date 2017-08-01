@@ -2,44 +2,45 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>App:ple Pi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/jquery.flipster.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link href='https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css' rel='stylesheet' type='text/css'>
+    <title>App:ple Pi</title>
     <style media="screen">
       html{
-        height: 100%;
+        min-height: 100%;
+        margin: 0;
       }
       body{
+        min-height: 100%;
+        margin: 0;
         background: linear-gradient(rgb(253, 145, 122), rgb(251, 104, 105));
       }
-      .navbar {
-        min-height: 70px;
-        box-shadow: 0px 2px 3px rgb(182, 130, 117);
+      .col-sm-8 img{
+        width: 100%;
       }
-
+      h1, p{
+        font-family: 'Nanum Barun Gothic', sans-serif;
+        color: white;
+        letter-spacing: 1px;
+      }
+      p{
+        font-weight: 200;
+        line-height: 25px;
+      }
+      h1{
+        padding-bottom: 20px;
+      }
+      .content{
+        padding-top: 5%;
+      }
       @media (min-width: 768px){
-        #my-flipster{
-          margin-top: 15%;
-          padding-bottom: 4px;
+        #text-content{
+          padding-top: 40%;
         }
-      }
-
-      @media (max-width: 767px){
-        #my-flipster{
-          margin-top: 30%;
-          padding-bottom: 4px;
-        }
-      }
-
-      #my-flipster>ul>li>div{
-        width: 300px;
-        height: 300px;
-        background: rgb(250, 250, 250);
-        box-shadow: 0px 2px 2px rgb(187, 75, 81);
       }
     </style>
   </head>
@@ -59,9 +60,9 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="index.html">메인</a></li>
-            <li><a href="introduction.html">소개</a></li>
+            <li class="active"><a href="introduction.html">소개</a></li>
             <li><a href="rewards.html">수상 실적</a></li>
-            <li class="active"><a href="activity.html">활동</a></li>
+            <li><a href="activity.html">활동</a></li>
             <li><a href="curriculum.html">커리큘럼</a></li>
             <li><a href="contact.html">CONTACT</a></li>
           </ul>
@@ -69,35 +70,28 @@
       </div>
     </nav>
 
-    <div id="my-flipster">
-      <ul>
-        <li>
-          <div>
-            <p>Hello</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="content">
+            <img src="images/img_intro.png">
           </div>
-        </li>
-        <li>
-          <div>
-            <p>World!</p>
+        </div>
+        <div class="col-sm-4">
+          <div class="content" id="text-content">
+            <h1>App:ple Pi</h1>
+            <p>: 2011년에 창설된 선린인터넷고등학교 모바일 앱 개발 동아리로 안드로이드 앱을 포함하여 게임, 웹, IoT를 함께 배우고, 개발하는 동아리입니다.</p>
+            <p> 중소 기업청에서 지원하는 비즈쿨 동아리로, 선배들과 후배들 간의 사이가 돈독한 가족같은 분위기가 특징입니다.</p>
+            <p>App:ple Pi는 안드로이드의 첫번째 버전 ApplePie를 본떠서 지은 이름 입니다.</p>
           </div>
-        </li>
-        <li>
-          <div>
-            <p>LoL</p>
-          </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.flipster.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script>
-    var flat = $("#my-flipster").flipster({
-        style: 'flat',
-        spacing: -0.001,
-        buttons: true
-    });
-    </script>
   </body>
 </html>

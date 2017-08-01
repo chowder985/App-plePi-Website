@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link href='https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css' rel='stylesheet' type='text/css'>
     <style media="screen">
     #content {
       text-align: center;
-      padding-top: 25%;
+      padding-top: 15%;
+    }
+
+    html{
+      height: 100%;
     }
 
     hr{
@@ -19,11 +24,47 @@
       width: 20%;
       height: 5px;
       background-color: white;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    body{
+      background: url("images/bg_main.png") no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    h1, h2, h3{
+      color: white;
+      font-family: 'Nanum Barun Gothic', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    h2{
+      font-weight: 300;
+    }
+
+    h3{
+      font-weight: 200;
+    }
+
+    .icons{
+      position: fixed;
+      bottom: 30px;
+      right: 50px;
+    }
+
+    .icons a img{
+      max-width: 40px;
+    }
+
+    .icons a img:nth-child(1){
+      margin-right: 10px;
     }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -62,7 +103,10 @@
       </div>
     </div>
 
-
+    <div class="icons">
+      <a href="#"><img src="images/ic_blog.png" alt="Blog"></a>
+      <a target="_blank" href="https://www.facebook.com/app.plepi/?fref=ts"><img src="images/ic_facebook.png" alt="Facebook"></a>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.js"
