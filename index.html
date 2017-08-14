@@ -61,6 +61,19 @@
     .icons a img:nth-child(1){
       margin-right: 10px;
     }
+
+    .flipped{
+      transform: scale(-1, 1);
+      -moz-transform: scale(-1, 1);
+      -webkit-transform: scale(-1, 1);
+      -o-transform: scale(-1, 1);
+      -khtml-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+    }
+
+    .icon{
+      transition: all 0.2s;
+    }
     </style>
   </head>
   <body>
@@ -104,8 +117,8 @@
     </div>
 
     <div class="icons">
-      <a href="#"><img src="images/ic_blog.png" alt="Blog"></a>
-      <a target="_blank" href="https://www.facebook.com/app.plepi/?fref=ts"><img src="images/ic_facebook.png" alt="Facebook"></a>
+      <a href="#"><img class="icon" src="images/ic_blog.png" alt="Blog"></a>
+      <a target="_blank" href="https://www.facebook.com/app.plepi/?fref=ts"><img class="icon" src="images/ic_facebook.png" alt="Facebook"></a>
     </div>
 
     <script
@@ -113,5 +126,12 @@
       integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
       crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(".icon").mouseover(function(){
+        $(this).addClass("flipped");
+      }).mouseleave(function(){
+        $(this).removeClass("flipped");
+      });
+    </script>
   </body>
 </html>
